@@ -1,4 +1,4 @@
-package Project_1;
+package WolvesAndSheep;
 
 import java.util.ArrayList;
 import java.util.Vector;
