@@ -1,9 +1,10 @@
 /// Java program for different tree traversals
- 
+ //we can remove the binary tree part, just keep the traversal
 /* Class containing left and right child of current
    DFS and key value*/
 class DFS {
     int key;
+    public Vector<Integer> stateVector;
     DFS left, right;
  
     public DFS(int item)
@@ -21,6 +22,10 @@ class BinaryTree {
         root = null;
     }
  
+    public boolean hasMatch(stateVector vec) {
+        if(stateVector)
+
+    }
     /* Given a binary tree, print its DFSs in inorder*/
     void printInorder(DFS DFS)
     {
@@ -29,7 +34,7 @@ class BinaryTree {
  
         /* first recur on left child */
         printInorder(DFS.left);
- 
+        //place search here <-------------------------------------------------------------------
         /* then print the data of DFS */
         System.out.print(DFS.key + " ");
  
@@ -38,7 +43,9 @@ class BinaryTree {
     }
  
     // Wrappers over above recursive functions
-    void printInorder() { printInorder(root); }
+    void printInorder() { 
+        printInorder(root); 
+    }
  
     // Driver code
     public static void main(String[] args)
