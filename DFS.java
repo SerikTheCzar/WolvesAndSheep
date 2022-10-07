@@ -3,12 +3,14 @@
 /* Class containing left and right child of current
    DFS and key value*/
 class DFS {
+    StateNode sn;
     int key;
     DFS left, right;
  
-    public DFS(int item)
+    public DFS(StateNode s)
     {
-        key = item;
+        sn = s;
+        //key = item;
         left = right = null;
     }
 }
