@@ -37,6 +37,23 @@ public class StateNode {
         stateVector.set(1, stateVector.get(1) + s);
         stateVector.set(2, stateVector.get(2) + b);
     }
+    
+    public boolean isFailCase() {
+        int w_left = getWolves();
+        int s_left = getSheep();
+
+        int w_right = 3 - w_left;
+        int s_right = 3 - s_left;
+
+        boolean case_left = (s_left > 0 && w_left > s_left);
+        boolean case_right = (s_right > 0 && w_right > s_right);
+
+        if(case_left && case_right) {
+            return true;
+        }
+        
+        return false;
+    }
 
     public void addChild(StateNode child) {
         children.add(child);
